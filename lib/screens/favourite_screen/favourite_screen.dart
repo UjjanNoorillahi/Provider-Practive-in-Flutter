@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../provider/favourite_provider.dart';
+import '../../provider/favourite_provider.dart';
 import 'my_favourite_item.dart';
 
 class FavouriteScreen extends StatefulWidget {
@@ -15,7 +15,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
   List<int> selectedItem = [];
   @override
   Widget build(BuildContext context) {
-    print("Build");
+    // print("Build");
     return Scaffold(
       appBar: AppBar(
         title: const Text('Favourite App'),
