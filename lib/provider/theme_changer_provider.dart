@@ -7,7 +7,6 @@ class ThemeChanger with ChangeNotifier {
 
   void setTheme(themeMode) {
     _themeMode = themeMode;
-
     notifyListeners();
   }
 }

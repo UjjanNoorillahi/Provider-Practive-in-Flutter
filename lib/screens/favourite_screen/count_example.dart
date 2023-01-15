@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:statemanagment_practice/provider/counter_provider.dart';
 
-import '../provider/counter_provider.dart';
+import '../../provider/counter_provider.dart';
 
 class CountExample extends StatefulWidget {
   const CountExample({super.key});
