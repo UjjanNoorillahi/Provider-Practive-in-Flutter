@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:statemanagment_practice/provider/auth_provider.dart';
 import 'package:statemanagment_practice/provider/counter_provider.dart';
 import 'package:statemanagment_practice/provider/example_one_provider.dart';
 import 'package:statemanagment_practice/provider/favourite_provider.dart';
 import 'package:statemanagment_practice/provider/theme_changer_provider.dart';
 // import 'package:statemanagment_practice/screens/count_example.dart';
 import 'package:statemanagment_practice/screens/favourite_screen/dark_theme_screen.dart';
+import 'package:statemanagment_practice/screens/favourite_screen/login_screen.dart';
 import 'package:statemanagment_practice/screens/favourite_screen/value_notfiy_listener.dart';
 // import 'package:statemanagment_practice/screens/example_one.dart';
 // import 'package:statemanagment_practice/screens/favourite_screen/favourite_screen.dart';
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => ExampleOneProvider()),
         ChangeNotifierProvider(create: (_) => FavourtieProvider()),
         ChangeNotifierProvider(create: (_) => ThemeChanger()),
+        ChangeNotifierProvider(create: (_) => AuthProvider()),
       ],
       child: Builder(builder: (BuildContext context) {
         final themeChanger = Provider.of<ThemeChanger>(context);
@@ -41,7 +44,7 @@ class MyApp extends StatelessWidget {
               brightness: Brightness.dark,
               // ignore: prefer_const_constructors
               appBarTheme: AppBarTheme(backgroundColor: Colors.teal)),
-          home: NotifyListenerScreen(),
+          home: const LoginScreen(),
         );
       }),
     );
